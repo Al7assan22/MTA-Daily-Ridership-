@@ -6,7 +6,7 @@ import seaborn as sns
 import os
 
 # ================== 1. Setup API Key and Gemini ==================
-api_key = os.getenv("GEMINI_API_KEY", "AIzaSyBJN5q8Qi1t4ZYHVY8_4iXnqIHkxS5LXe0")
+api_key = os.getenv("GEMINI_API_KEY", "API KEY")
 if not api_key:
     st.error("Please set the Gemini API key in the GEMINI_API_KEY environment variable.")
     st.stop()
@@ -40,7 +40,7 @@ The user asked a question about a sample dataset:
 {context}
 
 Answer the question clearly.
-If the user asks for a chart or visual, return Python code using matplotlib or seaborn.
+If the user asks for a chart or visual, return python code.
 Do not leave the answer empty.
 
 Question: {question}
@@ -202,5 +202,6 @@ if final_question:
             # Display the answer
             st.write(answer)
             add_message("assistant", answer)
+
 
 
