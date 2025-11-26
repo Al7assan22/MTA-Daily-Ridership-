@@ -204,7 +204,7 @@ SELECT TOP 1
 FROM daily_ridership
 ORDER BY traffic_share DESC
 
----Subway–Bus Correlation
+---Subwayâ€“Bus Correlation
 
 SELECT 
 (
